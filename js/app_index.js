@@ -96,7 +96,7 @@ window.onload = function() {
         .then (function(respuesta) {
             if(respuesta.status === 200) {
                 localStorage.setItem("Login", true)
-                alert("Usuario y clave correctos")
+                document.location.href = "./dashboard.html"
             } else {
                 openModal()
             }

@@ -6,8 +6,10 @@ window.onload = function () {
         return respuesta.json()
     })
     .then(function(datos){
-        //console.log(datos.json())
         console.log(datos.data[0])
+        datos.data.forEach(user => {
+            console.log(user)
+        });
     })
     .catch(function(error) {
         alert("Hubo un problema al enviar los datos, intente nuevamente!!!")
