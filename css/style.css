@@ -4,6 +4,9 @@
 .block {
     display: block;
 }
+.center {
+    text-align: center;
+}
 h1 {
     font-weight: 600;
     text-align: center;

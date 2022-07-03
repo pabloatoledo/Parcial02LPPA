@@ -1,4 +1,8 @@
 window.onload = function() {
+    // --------- valida usuario logueado previamente ----------------//
+
+    var logOk = localStorage.getItem("Login") == "true" ? alert ("usuario logueado") : alert("Usuario no logueado")
+
     // --------- variables ----------------//
 
     var camOk
@@ -91,6 +95,7 @@ window.onload = function() {
         )
         .then (function(respuesta) {
             if(respuesta.status === 200) {
+                localStorage.setItem("Login", true)
                 alert("Usuario y clave correctos")
             } else {
                 openModal()
