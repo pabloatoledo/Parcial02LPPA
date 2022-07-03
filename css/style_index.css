@@ -5,3 +5,6 @@
 .mail, .contra {
     display: flex;
 }
+.error {
+    color: red;
+}
