@@ -1,5 +1,4 @@
 window.onload = function() {
-
     fetch("https://basic-server-one.vercel.app/login", 
         {method: 
             "POST",
@@ -7,16 +6,15 @@ window.onload = function() {
             {"Content-Type": "application/json",},
         body: 
             JSON.stringify({
-                email: "valeria@gmai.com",
+                email: "valeria@gmail.com",
                 password: "lppa2022"})
     })
     .then (function(respuesta) {
-        return respuesta.JSON()
-    }) 
-    .then (function(datos) {
-        console.log(datos, "todo ok")
-    })
-    .catch(function(error) {
-        alert("Hubo un problema al enviar los datos, intente nuevamente!!!")
+        if(respuesta.status === 200) {
+            console.log("valido el usuario")
+        } else {
+            console.log("No valido el usuario")
+        }
+        return respuesta.json()
     })
 }
