@@ -1,7 +1,3 @@
-.icono {
-    max-width: 50px;
-    max-height: 50px;
-}
-.mail, .contra {
-    display: flex;
+h1 {
+    font-weight: 600;
 }
