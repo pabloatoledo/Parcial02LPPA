@@ -14,21 +14,25 @@
     <body>
         <h1>Ingrese su correo y clave para ingresar al sistema</h1>
         <form>
-            <div class="mail">
-                <img src="./img/user.png" class="icono" alt="email">
-                <input type="text" name="email" id="email" placeholder="Ingrese su email">
-                <p class="error oculto" id="errMail">Ingrese un mail correcto</p>
+            <div class="gralMail">
+                <div class="mail">
+                    <img src="./img/user.png" class="icono" alt="email">
+                    <input type="text" name="email" id="email" placeholder="Ingrese su email">
+                </div>
+                <p class="error oculto center" id="errMail">Ingrese un mail correcto</p>
             </div>
-            <div class="contra">
-                <img src="./img/pass.png" class="icono" alt="contraseña">
-                <input type="password" name="pass" id="pass" placeholder="Ingresa tu clave">
-                <p class="error oculto" id="errPass">La clave no debe quedar vacía</p>
+            <div class="gralContra">
+                <div class="contra">
+                    <img src="./img/pass.png" class="icono" alt="contraseña">
+                    <input type="password" name="pass" id="pass" placeholder="Ingresa tu clave">
+                </div>
+                <p class="error oculto center" id="errPass">La clave no debe quedar vacía</p>
             </div>
             <div class="iniSesion">
-                <input type="button" value="Iniciar Sesión" id="iniSes">
+                <input type="button" value="INICIAR SESIÓN" id="iniSes">
             </div>
             <div class="olvContra">
-                <input type="button" value="Olvidé mi contraseña">
+                <input type="button" value="OLVIDÉ MI CONTRASEÑA" id="olvContra">
             </div>
         </form>
         <div id="modalFalla" class="modal oculto">

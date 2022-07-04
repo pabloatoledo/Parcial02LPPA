@@ -5,6 +5,30 @@
 .mail, .contra {
     display: flex;
 }
+.mail input, .contra input {
+    width: 100%;
+}
 .error {
     color: red;
+}
+.gralMail, .gralContra {
+    width: 464px;
+    margin: 0 auto;
+}
+.mail, .contra, .mail input, .contra input{
+    background-color: #E1E3ED;
+}
+.gralMail, .gralContra {
+    margin-bottom: 24px;
+    background-color: #E1E3ED;
+    font-size: 20px;
+    font-weight: 700;
+}
+#iniSes {
+    background-color: #517673;
+    border-radius: 4px;
+    color: #E1E3ED;
+}
+#olvContra {
+    color: #517673;
 }
