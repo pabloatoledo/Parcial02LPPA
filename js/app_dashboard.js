@@ -4,21 +4,31 @@ window.onload = function () {
     var cont
     var linkDatos = "https://basic-server-one.vercel.app/users"
     var btnCierraSes = document.getElementById("cierraSes")
+    var modal = document.getElementById("modalFalla")
+    var span = document.getElementsByClassName("close")[0]
 
     // --------- Inputs ----------------//
 
     btnCierraSes.addEventListener("click", cierraSesion)
+    span.onclick = function() {
+        modal.classList.remove("block")
+        modal.classList.add("oculto")
+        }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.classList.remove("block")
+            modal.classList.add("oculto")
+        }
+    }
 
     // --------- llena tabla ----------------//
 
     fetch (linkDatos)
-
     .then(function(respuesta) {
         return respuesta.json()
     })
     .then(function(datos){
         cont = 1
-        console.log(datos.data[0])
         datos.data.forEach(usuario => {
             var trNew = document.createElement("tr")
             var td1 = document.createElement("td")
@@ -74,7 +84,7 @@ window.onload = function () {
         });
     })
     .catch(function(error) {
-        alert("Hubo un problema al enviar los datos, intente nuevamente!!!")
+        openModal() 
     })
 
     // --------- funciones ----------------//
@@ -82,5 +92,10 @@ window.onload = function () {
     function cierraSesion () {
         localStorage.removeItem("Login")
         location.href = "./index.html"
+    }
+
+    function openModal () {
+        modal.classList.remove("oculto")
+        modal.classList.add("block")
     }
 }
