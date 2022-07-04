@@ -13,4 +13,7 @@ th {
     background-color: #517673;
     border-radius: 4px;
     color: #E1E3ED;
+    max-width: 300px;
+    margin-right: 24px;
+    margin-top: 24px;
 }
