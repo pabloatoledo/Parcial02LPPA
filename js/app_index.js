@@ -1,7 +1,7 @@
 window.onload = function() {
     // --------- valida usuario logueado previamente ----------------//
-
-    var logOk = localStorage.getItem("Login") == "true" ? alert ("usuario logueado") : alert("Usuario no logueado")
+    var logued
+    var logOk = localStorage.getItem("Login") == "true" ? document.location.href = "./dashboard.html" : logued = false
 
     // --------- variables ----------------//
 
