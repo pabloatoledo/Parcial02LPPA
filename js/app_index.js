@@ -6,9 +6,6 @@ window.onload = function() {
     // --------- variables ----------------//
 
     var camOk
-
-    // --------- busca en html ----------------//
-    
     var email = document.getElementById("email")
     var pass = document.getElementById("pass")
     var errMail = document.getElementById("errMail")

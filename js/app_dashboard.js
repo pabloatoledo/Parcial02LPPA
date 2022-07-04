@@ -1,8 +1,13 @@
 window.onload = function () {
 
-    // --------- inicia variables ----------------//
+    // --------- variables ----------------//
     var cont
     var linkDatos = "https://basic-server-one.vercel.app/users"
+    var btnCierraSes = document.getElementById("cierraSes")
+
+    // --------- Inputs ----------------//
+
+    btnCierraSes.addEventListener("click", cierraSesion)
 
     // --------- llena tabla ----------------//
 
@@ -15,8 +20,6 @@ window.onload = function () {
         cont = 1
         console.log(datos.data[0])
         datos.data.forEach(usuario => {
-            //console.log(usuario.address.city)
-            
             var trNew = document.createElement("tr")
             var td1 = document.createElement("td")
             var td2 = document.createElement("td")
@@ -73,4 +76,11 @@ window.onload = function () {
     .catch(function(error) {
         alert("Hubo un problema al enviar los datos, intente nuevamente!!!")
     })
+
+    // --------- funciones ----------------//
+
+    function cierraSesion () {
+        localStorage.removeItem("Login")
+        location.href = "./index.html"
+    }
 }
